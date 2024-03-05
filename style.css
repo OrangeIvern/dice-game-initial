@@ -1,0 +1,28 @@
+.hero-main
+{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.center-position
+{
+position:relative;
+/* border: 2px solid green; */
+}
+.head,.head-win,.head-lose
+{
+    position:absolute;
+    right:30%;
+    top:8%;
+    max-width:225px;
+    /* border:2px solid yellow; */
+}
+.head-win,.head-lose
+{
+    display:hidden;
+}
+img
+{
+    width: 100%;
+}
