@@ -38,7 +38,13 @@ img
 {
     width: 100%;
 }
-
+.status-tab
+{
+    position:absolute;
+    right:30%;
+    top:80%;
+    width: 40%;
+}
 .BG-two
 {
     width: 40%;
