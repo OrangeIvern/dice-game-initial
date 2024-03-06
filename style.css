@@ -23,6 +23,7 @@ position:relative;
     top:8%;
     width: 40%;
     /* border:2px solid yellow; */
+    animation: hoverAnimation 2s ease-in-out infinite; /* Apply animation */
 }
 .head-win,.head-lose
 {
@@ -56,15 +57,47 @@ img
     border: 2px solid red;
    justify-content: space-around;
 }
+.dice-one,.dice-two
+{
+    background-image: url('image/diceBG.png');
+    background-image: cover;
+    min-width: 200px;
+    min-height: 200px;
+    border:2px solid green;
+    
+}
 
-.grid-container {
+.grid-container 
+{
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
-    grid-gap: 10px; /* Gap between grid items */
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    padding:2%;
+    
 }
 
 .grid-item {
-    background-color: #ddd;
-    padding: 20px;
+    background-image: url('image/diceDots.png');
+    width: 30px;
+    height: 30px;
     text-align: center;
+    background-image: cover;
 }
+.grid-item-hidden
+{
+    background-image:url('image/blank.png');
+}
+
+@keyframes hoverAnimation {
+    0% {
+        transform: translateY(0); /* Start position */
+    }
+    50% {
+        transform: translateY(5px); /* Mid position */
+    }
+    100% {
+        transform: translateY(0); /* End position */
+    }
+}
+
