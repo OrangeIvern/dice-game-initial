@@ -16,6 +16,7 @@
             <img class="title-image" src="image/title.png" alt="dice game title">
             <div class="hero-main flex">
                 <div class="center-position">
+                    <!---Animated Head-->
                     <div class="head ">
                         <img src="image/faceNeutral.png" alt="neutralFace">
                     </div>
@@ -26,11 +27,22 @@
                     <div class="head-lose hidden">
                         <img src="image/faceWin.png" alt="ComputerWin">
                     </div>
+                    <!---Body-->
                     <div class="body">
                         <img src="image/body.png" alt="body">
                     </div>
-                    <div class="status-tab">
+                    <!--Dialogue -->
+                    <div class="status-tab ">
                         <img src="image/dialogue.png" alt="dialogue"> 
+                    </div>
+                    <div class="status-tab hidden">
+                        <img src="image/dialogue-winner.png" alt="dialogue"> 
+                    </div>
+                    <div class="status-tab hidden ">
+                        <img src="image/dialogue-lose.png" alt="dialogue"> 
+                    </div>
+                    <div class="status-tab hidden">
+                        <img src="image/dialogue-draw.png" alt="dialogue"> 
                     </div>
                 </div>
             </div>
@@ -60,7 +72,7 @@
             </div>
         
             <div class="bottom ">
-                <button class="button-roll ">Roll</button>
+                <button class="button-roll pixelify-sans" onclick="rollIt()">Roll</button>
             </div>
 
         </div>

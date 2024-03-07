@@ -4,22 +4,40 @@
     margin:0;
     padding:0;
 }
+
+.bottom
+{
+    /* border:2px solid red; */
+    text-align: center;
+    padding: .9rem 0;
+    background-color: #2d0b26;
+}
 .button-roll
 {
     width: 200px;
     padding:1rem;
-    border: 0px solid transparent;
-    background-color: rgb(82, 53, 80);
-    color:rgb(156, 196, 241);
+    border: 2px solid #d9cbdf;
+    background-color: #372c45;
+    color: #d9cbdf;
+    /* border-radius: 25px; */
     
 }
+.button-roll:hover
+{
+    
+    border: 2px solid#372c45;
+    background-color:  #d9cbdf  ;
+    color: #372c45;
+    
+    
+}
+
 .pixelify-sans
  {
     font-family: "Pixelify Sans", sans-serif;
     font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 2rem;
-    border-radius: 25px;
+    font-size: 1rem;
+    
    
   }
 .flex
@@ -48,7 +66,7 @@ position:relative;
     /* border:2px solid yellow; */
     animation: hoverAnimation 2s ease-in-out infinite; /* Apply animation */
 }
-.head-win,.head-lose
+.hidden
 {
     display:none;
 }
@@ -74,7 +92,8 @@ img
 }
 .BG-one
 {
-    background-image: url('image/BGChess.png');
+    /* background-image: url('image/BGChess.png'); */
+    background-color: #372c45;
     height: 100vh;
 }
 
@@ -83,8 +102,10 @@ img
     /* background-image: url('image/dialogue.png');
    
     background-size:"cover"; */
-    border: 2px solid red;
+    /* border: 2px solid red; */
    justify-content: space-around;
+   background-color: #136537;
+    padding: .9rem 0;
 }
 .dice-one,.dice-two
 {
@@ -92,7 +113,7 @@ img
     background-image: cover;
     min-width: 200px;
     min-height: 200px;
-    border:2px solid green;
+    /* border:2px solid green; */
     
 }
 
