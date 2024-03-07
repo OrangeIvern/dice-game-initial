@@ -12,7 +12,7 @@
     padding: .9rem 0;
     background-color: #2d0b26;
 }
-.button-roll
+#button-roll
 {
     width: 200px;
     padding:1rem;
@@ -66,10 +66,7 @@ position:relative;
     /* border:2px solid yellow; */
     animation: hoverAnimation 2s ease-in-out infinite; /* Apply animation */
 }
-.hidden
-{
-    display:none;
-}
+
 img
 {
     width: 100%;
@@ -150,5 +147,8 @@ img
         transform: translateY(0); /* End position */
     }
 }
-
+.hidden
+{
+    display: none;
+}
 

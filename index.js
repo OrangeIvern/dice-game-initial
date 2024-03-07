@@ -1,51 +1,9 @@
-let randomOne = Math.floor(Math.random() * 6) + 1;
-let randomTwo = Math.floor(Math.random() * 6) + 1;
-console.log(randomOne, randomTwo);
-let neutralDialogue = document.querySelector('.status-tab[0]');
 
-const diceOne = document.querySelector('.dice-one');
-const diceDots = document.querySelectorAll('.grid-item');
-const buttonRoll = document.querySelector('.button-roll');
-
-compareRoll(randomOne,randomTwo)
-
-
-
-function compareRoll(a,b)
-{
-if (a > b) 
-{
-    // YOU WIN!
-    //toggle the dialogue i win
-   
-    let winner = document.querySelector('.status-tab:nth-of-type(2)');
-    neutralDialogue.classList.add('.hidden')
-    winner.classList.toggle('.hidden');
-    displayDice(a)
-    displayDice(b)
-}
-else if (a < b)
-{
-    // YOU LOSE!
-    let loser = document.querySelector('.status-tab:nth-of-type(3)');
-    neutralDialogue.classList.add('.hidden')
-    loser.classList.toggle('.hidden');
-    displayDice(a)
-    displayDice(b)
-}
-else 
-{
-    // IT'S A TIE!
-    let draw = document.querySelector('.status-tab:nth-of-type(4)');
-    neutralDialogue.classList.add('.hidden')
-    draw.classList.toggle('.hidden');
-    displayDice(a)
-    displayDice(b)
-}
-}
+  
 
 function displayDice(value)
 {
+    const diceDots = document.querySelectorAll('.grid-item');
 if (value === 1)
 {
   diceDots[0].classList.add('hidden');
@@ -95,7 +53,70 @@ else
 
 
 
-function rollIt() {
-    compareRoll(randomOne,randomTwo) 
 
+
+// }
+  
+  // Get a reference to the button element
+  
+  
+  let neutralDialogue = document.querySelector('.status-tab:nth-of-type(1)');
+  const diceOne = document.querySelector('.dice-one');
+
+    
+
+
+
+  function buttonClicked()
+   {
+      let randomOne = Math.floor(Math.random() * 6) + 1;
+      let randomTwo = Math.floor(Math.random() * 6) + 1;
+      
+    //call compare dice
+      compareRoll(randomOne,randomTwo)
+      displayDice(randomOne)
+      displayDice(randomTwo)
+      console.log(displayDice(randomOne));
+    console.log(displayDice(randomTwo));
   }
+  
+ 
+  const button = document.getElementById("button-roll");
+  
+  // Add event listener to the button
+  button.addEventListener("click", buttonClicked);
+
+
+
+
+//compare dice values
+  function compareRoll(a,b)
+      {
+        let stats = document.querySelectorAll('.stats');
+        if (a > b) 
+      {
+         
+        stats[0].classList.add('hidden');
+        stats[1].classList.remove('hidden');
+        stats[2].classList.add('hidden');
+        stats[3].classList.add('hidden');
+        console.log("You win!");
+         
+      }
+      else if (a < b)
+      {
+        stats[0].classList.add('hidden');
+        stats[1].classList.add('hidden');
+        stats[2].classList.remove('hidden');
+        stats[3].classList.add('hidden');
+        console.log("You Lose!");
+      }
+      else 
+      {
+        stats[0].classList.add('hidden');
+        stats[1].classList.add('hidden');
+        stats[2].classList.add('hidden');
+        stats[3].classList.remove('hidden');
+        console.log("Draw");
+      }
+      }

@@ -33,17 +33,12 @@
                     </div>
                     <!--Dialogue -->
                     <div class="status-tab ">
-                        <img src="image/dialogue.png" alt="dialogue"> 
+                        <img class="stats " src="image/dialogue.png" alt="dialogue"> 
+                        <img class="stats hidden " src="image/dialogue-winner.png" alt="dialogue"> 
+                        <img class="stats hidden " src="image/dialogue-lose.png" alt="dialogue"> 
+                        <img class="stats hidden " src="image/dialogue-draw.png" alt="dialogue"> 
                     </div>
-                    <div class="status-tab hidden">
-                        <img src="image/dialogue-winner.png" alt="dialogue"> 
-                    </div>
-                    <div class="status-tab hidden ">
-                        <img src="image/dialogue-lose.png" alt="dialogue"> 
-                    </div>
-                    <div class="status-tab hidden">
-                        <img src="image/dialogue-draw.png" alt="dialogue"> 
-                    </div>
+                   
                 </div>
             </div>
             <div class="dialogue flex">
@@ -72,7 +67,7 @@
             </div>
         
             <div class="bottom ">
-                <button class="button-roll pixelify-sans" onclick="rollIt()">Roll</button>
+                <button id="button-roll" class=" pixelify-sans" >Roll</button>
             </div>
 
         </div>
