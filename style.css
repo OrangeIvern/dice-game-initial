@@ -9,7 +9,7 @@
 {
     /* border:2px solid red; */
     text-align: center;
-    padding: .9rem 0;
+    padding: 1.7rem 0;
     background-color: #2d0b26;
 }
 #button-roll
@@ -22,7 +22,7 @@
     /* border-radius: 25px; */
     
 }
-.button-roll:hover
+#button-roll:hover
 {
     
     border: 2px solid#372c45;
@@ -36,7 +36,7 @@
  {
     font-family: "Pixelify Sans", sans-serif;
     font-optical-sizing: auto;
-    font-size: 1rem;
+    font-size: 2rem;
     
    
   }
@@ -57,7 +57,7 @@
 position:relative;
 /* border: 2px solid green; */
 }
-.head,.head-win,.head-lose
+.heads
 {
     position:absolute;
     right:30%;
@@ -106,35 +106,13 @@ img
 }
 .dice-one,.dice-two
 {
-    background-image: url('image/diceBG.png');
-    background-image: cover;
-    min-width: 200px;
-    min-height: 200px;
+
+    width:20%
     /* border:2px solid green; */
     
 }
 
-.grid-container 
-{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* Three columns with equal width */
-    justify-items: center; /* Center items horizontally */
-    align-items: center; /* Center items vertically */
-    padding:2%;
-    
-}
 
-.grid-item {
-    background-image: url('image/diceDots.png');
-    width: 30px;
-    height: 30px;
-    text-align: center;
-    background-image: cover;
-}
-.grid-item-hidden
-{
-    background-image:url('image/blank.png');
-}
 
 @keyframes hoverAnimation {
     0% {
@@ -147,11 +125,29 @@ img
         transform: translateY(0); /* End position */
     }
 }
-.hidden
+ .hidden
 {
     display: none;
 }
 
+.versus
+{
+    width: 15%;
+}
+
+
 /* fix the dice display orientation */
 /* face emotion if it is defeated */
 /* dice rotation optional*/
+
+/* #slideDiv {
+    
+    
+    overflow: hidden;
+    transition: transform 0.5s ease;
+    transform: translateX(-200%);
+  }
+  
+  #slideDiv.visible {
+    transform: translateX(0);
+  } */ 

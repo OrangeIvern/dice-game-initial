@@ -3,81 +3,187 @@
 
 function displayDice(value)
 {
-    const diceDots = document.querySelectorAll('.grid-item');
-if (value === 1)
-{
-  diceDots[0].classList.add('hidden');
-  diceDots[2].classList.add('hidden');
-  diceDots[3].classList.add('hidden');
-  diceDots[4].classList.toggle('hidden');
-  diceDots[5].classList.add('hidden');
-  diceDots[6].classList.add('hidden');
-  diceDots[8].classList.add('hidden');
-}
-else if (value === 2)
-{
-    
-    diceDots[2].classList.add('hidden');
-    diceDots[3].classList.add('hidden');
-    diceDots[5].classList.add('hidden');
-    diceDots[6].classList.add('hidden');
    
-}
-else if (value === 3)
+if (value === 6)
 {
-    diceDots[2].classList.add('hidden');
-    diceDots[3].classList.add('hidden');
-    diceDots[4].classList.toggle('hidden');
-    diceDots[5].classList.add('hidden');
-    diceDots[6].classList.add('hidden');
-}
-
-else if (value === 4)
-{
-   
-    diceDots[3].classList.add('hidden');
-    diceDots[5].classList.add('hidden');
-    
+  dice[0].classList.add('hidden');
+  dice[1].classList.add('hidden');
+  dice[2].classList.add('hidden');
+  dice[3].classList.add('hidden');
+  dice[4].classList.add('hidden');
+  dice[5].classList.remove('hidden');
 }
 else if (value === 5)
 {
-    diceDots[3].classList.add('hidden');
-    diceDots[5].classList.add('hidden');
-    diceDots[4].classList.toggle('hidden');
+  dice[0].classList.add('hidden');
+  dice[1].classList.add('hidden');
+  dice[2].classList.add('hidden');
+  dice[3].classList.add('hidden');
+  dice[4].classList.remove('hidden');
+  dice[5].classList.add('hidden');
+
+   
+}
+else if (value === 4)
+{
+  dice[0].classList.add('hidden');
+  dice[1].classList.add('hidden');
+  dice[2].classList.add('hidden');
+  dice[3].classList.remove('hidden');
+  dice[4].classList.add('hidden');
+  dice[5].classList.add('hidden');
+
+}
+
+else if (value === 3)
+{
+  dice[0].classList.add('hidden');
+  dice[1].classList.add('hidden');
+  dice[2].classList.remove('hidden');
+  dice[3].classList.add('hidden');
+  dice[4].classList.add('hidden');
+  dice[5].classList.add('hidden');
+
+ 
+    
+}
+else if (value === 2)
+{
+    dice[0].classList.add('hidden');
+    dice[1].classList.remove('hidden');
+    dice[2].classList.add('hidden');
+    dice[3].classList.add('hidden');
+    dice[4].classList.add('hidden');
+    dice[5].classList.add('hidden');
+
+
 }
 else
 {
-    return diceDots
+  dice[0].classList.remove('hidden');
+  dice[1].classList.add('hidden');
+  dice[2].classList.add('hidden');
+  dice[3].classList.add('hidden');
+  dice[4].classList.add('hidden');
+  dice[5].classList.add('hidden');
 }
 }
+function displayDiceComp(value)
+{
+   
+if (value === 6)
+{
+  diceComp[0].classList.add('hidden');
+  diceComp[1].classList.add('hidden');
+  diceComp[2].classList.add('hidden');
+  diceComp[3].classList.add('hidden');
+  diceComp[4].classList.add('hidden');
+  diceComp[5].classList.remove('hidden');
+}
+else if (value === 5)
+{
+  diceComp[0].classList.add('hidden');
+  diceComp[1].classList.add('hidden');
+  diceComp[2].classList.add('hidden');
+  diceComp[3].classList.add('hidden');
+  diceComp[4].classList.remove('hidden');
+  diceComp[5].classList.add('hidden');
 
+   
+}
+else if (value === 4)
+{
+  diceComp[0].classList.add('hidden');
+  diceComp[1].classList.add('hidden');
+  diceComp[2].classList.add('hidden');
+  diceComp[3].classList.remove('hidden');
+  diceComp[4].classList.add('hidden');
+  diceComp[5].classList.add('hidden');
 
+}
 
+else if (value === 3)
+{
+  diceComp[0].classList.add('hidden');
+  diceComp[1].classList.add('hidden');
+  diceComp[2].classList.remove('hidden');
+  diceComp[3].classList.add('hidden');
+  diceComp[4].classList.add('hidden');
+  diceComp[5].classList.add('hidden');
 
-
-// }
-  
-  // Get a reference to the button element
-  
-  
-  let neutralDialogue = document.querySelector('.status-tab:nth-of-type(1)');
-  const diceOne = document.querySelector('.dice-one');
-
+ 
     
+}
+else if (value === 2)
+{
+  diceComp[0].classList.add('hidden');
+  diceComp[1].classList.remove('hidden');
+  diceComp[2].classList.add('hidden');
+  diceComp[3].classList.add('hidden');
+  diceComp[4].classList.add('hidden');
+  diceComp[5].classList.add('hidden');
+
+
+}
+else
+{
+  diceComp[0].classList.remove('hidden');
+  diceComp[1].classList.add('hidden');
+  diceComp[2].classList.add('hidden');
+  diceComp[3].classList.add('hidden');
+  diceComp[4].classList.add('hidden');
+  diceComp[5].classList.add('hidden');
+}
+}
+function facialExpression(x,y)
+{
+  let heads = document.querySelectorAll('.heads');
+        if (x > y) 
+      {
+         
+        heads[0].classList.add('hidden');
+        heads[1].classList.remove('hidden');
+        heads[2].classList.add('hidden');
+       
+        
+         
+      }
+      else if (x < y)
+      {
+        heads[0].classList.add('hidden');
+        heads[1].classList.add('hidden');
+        heads[2].classList.remove('hidden');
+       
+      }
+      else 
+      {
+        heads[0].classList.remove('hidden');
+        heads[1].classList.add('hidden');
+        heads[2].classList.add('hidden');
+       
+      }
+}
 
 
 
+  const dice = document.querySelectorAll('.dice');
+  const diceComp = document.querySelectorAll('.dice-comp');
   function buttonClicked()
    {
+    //css animation
+    // let slideDiv = document.getElementById("slideDiv");
+    // slideDiv.classList.toggle("visible");
       let randomOne = Math.floor(Math.random() * 6) + 1;
       let randomTwo = Math.floor(Math.random() * 6) + 1;
       
     //call compare dice
-      compareRoll(randomOne,randomTwo)
-      displayDice(randomOne)
-      displayDice(randomTwo)
-      console.log(displayDice(randomOne));
-    console.log(displayDice(randomTwo));
+    facialExpression(randomOne,randomTwo);
+      compareRoll(randomOne,randomTwo);
+      
+       //display the dice
+    displayDice(randomOne)
+    displayDiceComp(randomTwo)
+   
   }
   
  
@@ -101,6 +207,7 @@ else
         stats[2].classList.add('hidden');
         stats[3].classList.add('hidden');
         console.log("You win!");
+        console.log(a,b);
          
       }
       else if (a < b)
@@ -110,6 +217,7 @@ else
         stats[2].classList.remove('hidden');
         stats[3].classList.add('hidden');
         console.log("You Lose!");
+        console.log(a,b);
       }
       else 
       {
@@ -118,5 +226,7 @@ else
         stats[2].classList.add('hidden');
         stats[3].classList.remove('hidden');
         console.log("Draw");
+        console.log(a,b);
       }
       }
+
